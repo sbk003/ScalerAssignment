@@ -1,19 +1,21 @@
- name : multi_env_deploy.yml
+name: multi_env_deploy
 
 on:
   workflow_dispatch:
     inputs:
       name:
-        description: "environment"
+        description: "Environment"
         required: true
         type: choice
         options:
           - dev
           - staging
           - prod
+
 jobs:
   print_input:
     runs-on: ubuntu-latest
+
     steps:
       - name: Print input
-        run: echo "${{ inputs.name}}"
+        run: echo "${{ inputs.name }}"
