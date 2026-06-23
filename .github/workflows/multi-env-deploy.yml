@@ -1,12 +1,12 @@
  name : multi_env_deploy.yml
 
- on:
+on:
   workflow_dispatch:
     inputs:
       name:
         description: "environment"
         required: true
-        type: string
+        type: choice
         options:
           - dev
           - staging
